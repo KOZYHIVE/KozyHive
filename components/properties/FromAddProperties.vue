@@ -96,8 +96,6 @@ import {useNuxtApp} from "#imports";
 import useFetchApi from '~/composables/useFetchApi';
 import { useRouter } from "vue-router";
 import DashSidebar from "~/components/DashSidebar.vue";
-import {Cashflow} from "~/server/models/Cashflow";
-import {CashflowType} from "@prisma/client";
 
 const router = useRouter();
 const {$toast} = useNuxtApp();
@@ -133,14 +131,6 @@ const clearForm = () => {
   file.value = null;
 };
 
-
-const validateForm = () => {
-  if (!name.value || !city.value || !address.value || !price.value || !avaibleRoom.value || !totalRoom.value || !description.value || !file.value) {
-    $toast('Harap lengkapi semua field.', 'error')
-    return false
-  }
-  return true
-}
 
 const handleSubmit = async () => {
   try {

@@ -71,7 +71,7 @@ import {useNuxtApp} from "#imports";
 import useFetchApi from '~/composables/useFetchApi';
 import { useRouter } from "vue-router";
 import DashSidebar from "~/components/DashSidebar.vue";
-import {CashflowType} from "@prisma/client";
+import { CashflowType } from '~/types/cashflow'
 
 const router = useRouter();
 const {$toast} = useNuxtApp();
